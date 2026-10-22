@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Таблица | Кубок Открытой Лиги Кипербола</title>
+  <meta name="description" content="Турнирная таблица Кубка Открытой Лиги Кипербола: очки по правилам кипербола, сезоны 2026 и 2027.">
+  <meta name="theme-color" content="#0a0a0c">
+  <link rel="icon" type="image/png" href="assets/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/pages/tablitsa.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+<a class="skip-link" href="#main">К содержимому</a>
+<!-- header:start -->
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="site-brand" href="index.html">
+      <img src="assets/brand/shield-small.png" alt="Кипербол" width="61" height="46">
+      <span class="site-brand__text">Кубок Открытой<br>Лиги Кипербола</span>
+    </a>
+    <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="site-nav__toggle-icon" aria-hidden="true"></span>
+      <span>Меню</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Основное меню">
+      <ul class="site-nav__list">
+        <li><a href="index.html">Главная</a></li>
+        <li class="site-nav__label" aria-hidden="true">Кипербол: концепция и правила</li>
+        <li class="site-nav__group-start"><a href="kiperbol.html">Кипербол</a></li>
+        <li><a href="pravila.html">Правила</a></li>
+        <li class="site-nav__label" aria-hidden="true">Турнир</li>
+        <li class="site-nav__group-start"><a href="turnir.html">Турнир</a></li>
+        <li><a href="kalendar.html">Календарь</a></li>
+        <li><a href="tablitsa.html" aria-current="page">Таблица</a></li>
+        <li><a href="komandy.html">Команды</a></li>
+        <li class="site-nav__label" aria-hidden="true">Партнёрам и клубам</li>
+        <li class="site-nav__group-start"><a href="partneram.html">Партнёрам</a></li>
+        <li><a href="klubam.html">Клубам</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- header:end -->
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="page-hero__media">
+      <img src="assets/photos/stadium-night.jpg" alt="Стадион вечером при свете прожекторов" width="1920" height="1286">
+    </div>
+    <div class="wrap">
+      <p class="eyebrow">Турнир</p>
+      <h1>Таблица</h1>
+      <p class="lead">Очки — по правилам кипербола: победа в кипербатле — 1 очко, победа в матче — 2 очка. Ничьих нет.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="table-title">
+    <div class="wrap">
+      <h2 class="visually-hidden" id="table-title">Турнирная таблица по сезонам</h2>
+      <div class="season-switch-slot" id="season-switch"></div>
+      <div class="standings-box" id="standings" aria-live="polite">
+        <noscript><p class="empty-state"><strong>Нужен JavaScript</strong>Для отображения таблицы включите JavaScript в браузере.</p></noscript>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--surface" aria-labelledby="points-title">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="eyebrow">Правила</p>
+        <h2 class="section__title" id="points-title">Как считаются очки</h2>
+        <p class="lead">В каждом матче разыгрывается 3 очка. Возможное распределение — 3:0 или 2:1.</p>
+      </div>
+      <div class="grid grid--3">
+        <article class="card">
+          <p class="eyebrow">1-й тайм</p>
+          <h3 class="card__title">Кипербатл — 1 очко</h3>
+          <p class="card__text">Битва вратарей 2×2. В раундах плей-офф очко не начисляется — победитель получает фору в один мяч в футбольном матче.</p>
+        </article>
+        <article class="card">
+          <p class="eyebrow">2-й тайм</p>
+          <h3 class="card__title">Матч — 2 очка</h3>
+          <p class="card__text">Футбольный матч и обязательная серия пенальти, которая продолжается со счёта игры. Команда, выигравшая серию, — победитель матча.</p>
+        </article>
+        <article class="card">
+          <p class="eyebrow">Порядок мест</p>
+          <h3 class="card__title">Очки, затем мячи</h3>
+          <p class="card__text">При равенстве очков выше команда с лучшей разницей мячей, затем — с большим числом забитых.</p>
+        </article>
+      </div>
+      <p class="section__more"><a class="btn btn--ghost" href="pravila.html">Все правила кипербола</a></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- footer:start -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <p class="site-footer__title">Кубок Открытой Лиги Кипербола</p>
+        <p>Организатор — Фонд «Страна Футбола» Игоря Акинфеева.</p>
+        <p>Кипербол (KeeperBall) — новый формат футбола, в котором вратарь — главный герой.</p>
+      </div>
+      <nav aria-label="Меню в подвале">
+        <p class="site-footer__heading">Разделы</p>
+        <ul class="site-footer__menu">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="kiperbol.html">Кипербол</a></li>
+          <li><a href="pravila.html">Правила</a></li>
+          <li><a href="turnir.html">Турнир</a></li>
+          <li><a href="kalendar.html">Календарь</a></li>
+          <li><a href="tablitsa.html">Таблица</a></li>
+          <li><a href="komandy.html">Команды</a></li>
+          <li><a href="partneram.html">Партнёрам</a></li>
+          <li><a href="klubam.html">Клубам</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="site-footer__heading">Контакты</p>
+        <dl class="site-footer__contacts">
+          <dt>Почта</dt>
+          <dd><a data-contact="email" class="placeholder">[ПОЧТА — впиши]</a></dd>
+          <dt>Телефон</dt>
+          <dd><a data-contact="phone" class="placeholder">[ТЕЛЕФОН — впиши]</a></dd>
+          <dt>Соцсети</dt>
+          <dd><a data-contact="social" class="placeholder">[ТЕЛЕГРАМ/ВК — впиши]</a></dd>
+        </dl>
+      </div>
+    </div>
+    <p class="site-footer__bottom">Фонд «Страна Футбола» · Кубок Открытой Лиги Кипербола</p>
+  </div>
+</footer>
+<!-- footer:end -->
+
+<script src="data/site-data.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/tournament.js"></script>
+<script>
+(function () {
+  if (!window.KB || !KB.initSeasonView) return;
+  var emptyNotes = { "2027": "Сезон стартует в марте 2027" };
+  KB.initSeasonView(document.getElementById("season-switch"), document.getElementById("standings"), function (box, season, key) {
+    var body = KB.el("div");
+    box.appendChild(KB.el("h3", { class: "standings__season" }, season.title));
+    box.appendChild(body);
+    KB.renderStandings(body, KB.computeStandings(season), season, { emptyNote: emptyNotes[key] });
+  });
+})();
+</script>
+</body>
+</html>

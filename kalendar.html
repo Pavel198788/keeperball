@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Календарь | Кубок Открытой Лиги Кипербола</title>
+  <meta name="description" content="Календарь матчей: сезон 2026 — финал 15 октября 2026 в Реутове; сезон 2027 — российский этап с марта 2027.">
+  <meta name="theme-color" content="#0a0a0c">
+  <link rel="icon" type="image/png" href="assets/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/pages/kalendar.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+<a class="skip-link" href="#main">К содержимому</a>
+<!-- header:start -->
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="site-brand" href="index.html">
+      <img src="assets/brand/shield-small.png" alt="Кипербол" width="61" height="46">
+      <span class="site-brand__text">Кубок Открытой<br>Лиги Кипербола</span>
+    </a>
+    <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="site-nav__toggle-icon" aria-hidden="true"></span>
+      <span>Меню</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Основное меню">
+      <ul class="site-nav__list">
+        <li><a href="index.html">Главная</a></li>
+        <li class="site-nav__label" aria-hidden="true">Кипербол: концепция и правила</li>
+        <li class="site-nav__group-start"><a href="kiperbol.html">Кипербол</a></li>
+        <li><a href="pravila.html">Правила</a></li>
+        <li class="site-nav__label" aria-hidden="true">Турнир</li>
+        <li class="site-nav__group-start"><a href="turnir.html">Турнир</a></li>
+        <li><a href="kalendar.html" aria-current="page">Календарь</a></li>
+        <li><a href="tablitsa.html">Таблица</a></li>
+        <li><a href="komandy.html">Команды</a></li>
+        <li class="site-nav__label" aria-hidden="true">Партнёрам и клубам</li>
+        <li class="site-nav__group-start"><a href="partneram.html">Партнёрам</a></li>
+        <li><a href="klubam.html">Клубам</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- header:end -->
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="page-hero__media">
+      <img src="assets/photos/goal-net.jpg" alt="Футбольные ворота и сетка" width="1920" height="1280">
+    </div>
+    <div class="wrap">
+      <p class="eyebrow">Турнир</p>
+      <h1>Календарь</h1>
+      <p class="lead">Кипербол уже играется: финал сезона 2026 сыгран 15 октября в Реутове. Здесь — матчи сезона 2026 и расписание сезона 2027.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="calendar-title">
+    <div class="wrap">
+      <h2 class="visually-hidden" id="calendar-title">Матчи по сезонам</h2>
+      <div class="season-switch-slot" id="season-switch"></div>
+      <div class="calendar" id="calendar" aria-live="polite">
+        <noscript><p class="empty-state"><strong>Нужен JavaScript</strong>Для отображения календаря включите JavaScript в браузере.</p></noscript>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--surface" aria-labelledby="format-title">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="eyebrow">Сезон 2027</p>
+        <h2 class="section__title" id="format-title">Формат и сроки</h2>
+        <p class="lead">Расписание матчей появится перед стартом сезона в марте 2027.</p>
+      </div>
+      <ol class="timeline timeline--row" style="--steps: 3">
+        <li class="timeline__item">
+          <span class="timeline__date">Март – ноябрь 2027</span>
+          <span class="timeline__title">Российский этап</span>
+          <p class="timeline__text">Игры еженедельно, между турами молодёжного чемпионата России (ориентировочно — по вторникам), в два круга — дома и в гостях.</p>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__date">Конец мая – начало июня</span>
+          <span class="timeline__title">Финал четырёх</span>
+          <p class="timeline__text">Четыре финалиста российского этапа играют в Академии А35 в Реутове.</p>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__date">Июнь 2027</span>
+          <span class="timeline__title">Международный этап — Гран-при</span>
+          <p class="timeline__text">Академия А35, Реутов; даты согласуются.</p>
+        </li>
+      </ol>
+      <p class="section__more"><a class="btn btn--ghost" href="turnir.html">Как устроен турнир</a></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- footer:start -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <p class="site-footer__title">Кубок Открытой Лиги Кипербола</p>
+        <p>Организатор — Фонд «Страна Футбола» Игоря Акинфеева.</p>
+        <p>Кипербол (KeeperBall) — новый формат футбола, в котором вратарь — главный герой.</p>
+      </div>
+      <nav aria-label="Меню в подвале">
+        <p class="site-footer__heading">Разделы</p>
+        <ul class="site-footer__menu">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="kiperbol.html">Кипербол</a></li>
+          <li><a href="pravila.html">Правила</a></li>
+          <li><a href="turnir.html">Турнир</a></li>
+          <li><a href="kalendar.html">Календарь</a></li>
+          <li><a href="tablitsa.html">Таблица</a></li>
+          <li><a href="komandy.html">Команды</a></li>
+          <li><a href="partneram.html">Партнёрам</a></li>
+          <li><a href="klubam.html">Клубам</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="site-footer__heading">Контакты</p>
+        <dl class="site-footer__contacts">
+          <dt>Почта</dt>
+          <dd><a data-contact="email" class="placeholder">[ПОЧТА — впиши]</a></dd>
+          <dt>Телефон</dt>
+          <dd><a data-contact="phone" class="placeholder">[ТЕЛЕФОН — впиши]</a></dd>
+          <dt>Соцсети</dt>
+          <dd><a data-contact="social" class="placeholder">[ТЕЛЕГРАМ/ВК — впиши]</a></dd>
+        </dl>
+      </div>
+    </div>
+    <p class="site-footer__bottom">Фонд «Страна Футбола» · Кубок Открытой Лиги Кипербола</p>
+  </div>
+</footer>
+<!-- footer:end -->
+
+<script src="data/site-data.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/tournament.js"></script>
+<script>
+(function () {
+  if (!window.KB || !KB.initSeasonView) return;
+  KB.initSeasonView(document.getElementById("season-switch"), document.getElementById("calendar"), function (box, season) {
+    var body = KB.el("div");
+    box.appendChild(KB.el("h3", { class: "calendar__season" }, season.title));
+    box.appendChild(body);
+    KB.renderCalendar(body, season);
+  });
+})();
+</script>
+</body>
+</html>

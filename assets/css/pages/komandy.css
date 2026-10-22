@@ -1,0 +1,27 @@
+/* Страница «Команды». Только токены из site.css. */
+
+.teams { display: grid; gap: clamp(16px, 2.4vw, 28px); grid-template-columns: 1fr; align-items: start; }
+@media (min-width: 760px) { .teams { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .teams { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.teams__item { min-width: 0; }
+.teams__note { margin-top: 24px; }
+
+.team-card__head { display: flex; align-items: center; gap: 18px; margin-bottom: 18px; }
+.team-card__logo, .team-card__head .team-mark { width: 96px; height: 96px; flex-shrink: 0; border-radius: 50%; }
+.team-card__name { font-size: clamp(20px, 2.4vw, 24px); margin: 0 0 4px; }
+.team-card__city { margin: 0; color: var(--c-copper-light); font-weight: 700; }
+.team-card__count { margin: 2px 0 0; color: var(--c-muted); font-size: 14px; }
+
+.roster { font-size: 15px; background: transparent; border: 1px solid var(--c-line); border-radius: var(--radius-sm); border-collapse: separate; border-spacing: 0; overflow: hidden; }
+.roster th, .roster td { padding: 8px 12px; }
+.roster__num { width: 3.2em; font-family: var(--font-display); font-weight: 600; color: var(--c-copper-light); }
+.roster__name { overflow-wrap: anywhere; }
+.roster__gk {
+  display: inline-block; margin-left: 8px; padding: 1px 8px; border-radius: 999px; vertical-align: 1px;
+  background: var(--g-copper); color: var(--c-on-copper); font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase;
+}
+.team-card .note { margin-bottom: 0; }
+
+@media (max-width: 420px) {
+  .team-card__logo, .team-card__head .team-mark { width: 72px; height: 72px; }
+}

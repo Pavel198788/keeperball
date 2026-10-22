@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="120 120 840 840" width="256" height="256" role="img" aria-label="Эмблема «Приалит» (Реутов)">
+  <title>Приалит Реутов</title>
+  <defs>
+    <clipPath id="pr-inner"><circle cx="540" cy="540" r="196"/></clipPath>
+    <clipPath id="pr-ball"><circle cx="538" cy="620" r="104"/></clipPath>
+    <path id="pr-top" d="M305.6 403.3 A306 306 0 0 1 774.4 403.3"/>
+    <path id="pr-bot1" d="M304 540 A236 236 0 0 0 776 540"/>
+    <path id="pr-bot2" d="M274 540 A266 266 0 0 0 806 540"/>
+  </defs>
+  <circle cx="540" cy="540" r="418" fill="#ffffff"/>
+  <circle cx="540" cy="540" r="388" fill="none" stroke="#2d547b" stroke-width="16"/>
+  <circle cx="540" cy="540" r="282" fill="#2d547b"/>
+  <g clip-path="url(#pr-inner)">
+    <rect x="300" y="300" width="480" height="480" fill="#ffffff"/>
+    <rect x="300" y="505" width="480" height="114" fill="#217dc0"/>
+    <rect x="300" y="619" width="480" height="160" fill="#e0302a"/>
+  </g>
+  <g fill="#ffffff">
+    <polygon points="302,511 305.9,521.6 317.2,522.1 308.4,529.1 311.4,539.9 302,533.7 292.6,539.9 295.6,529.1 286.8,522.1 298.1,521.6"/><polygon points="316,601 319.9,611.6 331.2,612.1 322.4,619.1 325.4,629.9 316,623.7 306.6,629.9 309.6,619.1 300.8,612.1 312.1,611.6"/><polygon points="356,684 359.9,694.6 371.2,695.1 362.4,702.1 365.4,712.9 356,706.7 346.6,712.9 349.6,702.1 340.8,695.1 352.1,694.6"/><polygon points="778,511 781.9,521.6 793.2,522.1 784.4,529.1 787.4,539.9 778,533.7 768.6,539.9 771.6,529.1 762.8,522.1 774.1,521.6"/><polygon points="764,601 767.9,611.6 779.2,612.1 770.4,619.1 773.4,629.9 764,623.7 754.6,629.9 757.6,619.1 748.8,612.1 760.1,611.6"/><polygon points="724,684 727.9,694.6 739.2,695.1 730.4,702.1 733.4,712.9 724,706.7 714.6,712.9 717.6,702.1 708.8,695.1 720.1,694.6"/>
+  </g>
+  <g clip-path="url(#pr-ball)">
+    <circle cx="538" cy="620" r="104" fill="#ffffff"/>
+    <g fill="#1a1a1a"><polygon points="538,587 569.4,609.8 557.4,646.7 518.6,646.7 506.6,609.8"/><polygon points="576.2,567.4 564.9,532.8 594.4,511.3 623.9,532.8 612.6,567.4"/><polygon points="599.8,640.1 629.3,618.7 658.8,640.1 647.5,674.7 611.1,674.7"/><polygon points="538,685 567.5,706.4 556.2,741.1 519.8,741.1 508.5,706.4"/><polygon points="476.2,640.1 464.9,674.7 428.5,674.7 417.2,640.1 446.7,618.7"/><polygon points="499.8,567.4 463.4,567.4 452.1,532.8 481.6,511.3 511.1,532.8"/></g>
+    <path d="M538 587 L538 558 M538 558 L612.6 567.4 M597 600.8 L564.9 532.8 M538 558 L538 558 M569.4 609.8 L597 600.8 M597 600.8 L611.1 674.7 M574.4 670.2 L629.3 618.7 M597 600.8 L597 600.8 M557.4 646.7 L574.4 670.2 M574.4 670.2 L508.5 706.4 M501.6 670.2 L567.5 706.4 M574.4 670.2 L574.4 670.2 M518.6 646.7 L501.6 670.2 M501.6 670.2 L446.7 618.7 M479 600.8 L464.9 674.7 M501.6 670.2 L501.6 670.2 M506.6 609.8 L479 600.8 M479 600.8 L511.1 532.8 M538 558 L463.4 567.4 M479 600.8 L479 600.8" stroke="#1a1a1a" stroke-width="5" fill="none"/>
+  </g>
+  <circle cx="538" cy="620" r="104" fill="none" stroke="#1a1a1a" stroke-width="5"/>
+  <g>
+    <path fill="#e8b70f" d="M522 424 Q522 404 540 403 Q558 404 558 424 Q558 466 584 486 Q586 494 578 494 H502 Q494 494 496 486 Q522 466 522 424 Z"/>
+    <path fill="#b8860b" d="M540 403 Q558 404 558 424 Q558 466 584 486 Q586 494 578 494 H556 Q548 470 547 424 Q547 410 540 403 Z" opacity="0.55"/>
+    <circle cx="540" cy="499" r="8" fill="#e8b70f"/>
+    <path fill="#ffffff" stroke="#7d8b99" stroke-width="2.5" stroke-linejoin="round" d="M518 396 L530 390 Q536 380 552 380 Q556 372 563 374 Q568 376 566 380 L572 382 L565 384 Q566 394 556 399 Z"/>
+    <path fill="none" stroke="#7d8b99" stroke-width="2.5" stroke-linecap="round" d="M532 391 Q542 384 552 388"/>
+  </g>
+  <path fill="#8e2422" d="M340 296 L278 282 L258 410 L282 392 L302 424 L372 372 Z"/><path fill="#c12d2d" d="M326 300 Q296 268 274 276 Q254 284 258 304 L278 330 Q300 322 326 318 Z"/><path fill="#8e2422" d="M740 296 L802 282 L822 410 L798 392 L778 424 L708 372 Z"/><path fill="#c12d2d" d="M754 300 Q784 268 806 276 Q826 284 822 304 L802 330 Q780 322 754 318 Z"/>
+  <path fill="#c12d2d" d="M330.2 311.2 A357 357 0 0 1 749.8 311.2 L710.5 365.4 A290 290 0 0 0 369.5 365.4 Z"/>
+  <text font-family="Georgia, 'Times New Roman', Times, serif" font-weight="700" font-size="47" fill="#ffffff" text-anchor="middle" letter-spacing="0.5"><textPath href="#pr-top" startOffset="50%">«Приалит Реутов»</textPath></text>
+  <text font-family="'Arial Narrow', 'Roboto Condensed', Arial, Helvetica, sans-serif" font-weight="700" fill="#ffffff" text-anchor="middle">
+    <textPath href="#pr-bot1" startOffset="50%" font-size="40">СПОРТИВНАЯ</textPath>
+  </text>
+  <text font-family="'Arial Narrow', 'Roboto Condensed', Arial, Helvetica, sans-serif" font-weight="700" fill="#ffffff" text-anchor="middle">
+    <textPath href="#pr-bot2" startOffset="50%" font-size="28">ШКОЛА</textPath>
+  </text>
+</svg>
