@@ -526,3 +526,7 @@ img.team-logo[src*="teams/2027/"] { padding: 2px; }
   .team-emblem, img.team-logo[src*="teams/2027/"] { background: none !important; filter: none; }
   .slide .teams .team-emblem { background: rgba(255,255,255,0.06) !important; filter: drop-shadow(0 0 1px rgba(255,255,255,0.35)); }
 }
+/* Мастер-Сатурн — тёмно-синий шрифтовой знак: белый кружок, как в оригинале */
+img.team-emblem[src*="master-saturn"],
+img.team-logo[src*="master-saturn"] { background: #fff !important; padding: 6px; filter: none; }
+@media print { img.team-emblem[src*="master-saturn"], img.team-logo[src*="master-saturn"] { background: #fff !important; } }

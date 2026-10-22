@@ -14,5 +14,4 @@
 | Витязь | `vityaz.svg` (перерисовка) | по https://upload.wikimedia.org/wikipedia/ru/a/ad/New_fc_vityaz_logo_2011.png | товарный знак (ru.wikipedia) |
 | Мастер-Сатурн | `master-saturn.svg` (перерисовка) | по https://photobooth.cdn.sports.ru/preset/ugc/2/43/a6d01ff7844c38731339e56cf42d2.png | товарный знак клуба, источник sports.ru |
 
-Пока перерисовки `vityaz.svg` и `master-saturn.svg` не готовы, сайт ссылается на `vityaz.png` и
-`master-saturn.png` (в `data/site-data.js`, `index.html`, `turnir.html`, `klubam.html`).
+Витязь и Мастер-Сатурн — векторные перерисовки по исходникам выше; PNG-исходники лежат рядом.

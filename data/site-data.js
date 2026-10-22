@@ -96,8 +96,8 @@ window.SITE_DATA = {
         { id: "dinamo", name: "Динамо", city: null, logo: "assets/teams/2027/dinamo.svg", players: [] },
         { id: "rodina", name: "Родина", city: null, logo: "assets/teams/2027/rodina.svg", players: [] },
         { id: "chertanovo", name: "Чертаново", city: null, logo: "assets/teams/2027/chertanovo.png", players: [] },
-        { id: "master-saturn", name: "Мастер-Сатурн", city: null, logo: "assets/teams/2027/master-saturn.png", players: [] },
-        { id: "vityaz", name: "Витязь", city: null, logo: "assets/teams/2027/vityaz.png", players: [] }
+        { id: "master-saturn", name: "Мастер-Сатурн", city: null, logo: "assets/teams/2027/master-saturn.svg", players: [] },
+        { id: "vityaz", name: "Витязь", city: null, logo: "assets/teams/2027/vityaz.svg", players: [] }
       ],
       matches: [],
       pointsOverride: null
