@@ -507,3 +507,22 @@ a.card:hover { transform: translateY(-3px); border-color: var(--c-line-strong); 
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* ---------- Эмблемы клубов 2027 (assets/teams/2027/) ---------- */
+/* Фиксированный квадрат, эмблема вписана целиком; мягкая светлая подложка —
+   одинаковая для всех, чтобы тёмно-синие эмблемы (Динамо, Чертаново) читались на тёмном фоне. */
+.team-emblem,
+img.team-logo[src*="teams/2027/"] {
+  display: inline-block; flex-shrink: 0; box-sizing: border-box;
+  object-fit: contain; border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  filter: drop-shadow(0 0 1px rgba(255,255,255,0.35));
+}
+.team-emblem { width: 48px; height: 48px; padding: 4px; }
+img.team-logo[src*="teams/2027/"] { padding: 2px; }
+@media (max-width: 400px) { .home-teams .team-emblem, .teams-grid .team-emblem { width: 40px; height: 40px; padding: 3px; } }
+.slide .teams .team-emblem { width: clamp(48px, 3vw + 24px, 72px); height: clamp(48px, 3vw + 24px, 72px); padding: 5px; }
+@media print {
+  .team-emblem, img.team-logo[src*="teams/2027/"] { background: none !important; filter: none; }
+  .slide .teams .team-emblem { background: rgba(255,255,255,0.06) !important; filter: drop-shadow(0 0 1px rgba(255,255,255,0.35)); }
+}

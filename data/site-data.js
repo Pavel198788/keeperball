@@ -90,14 +90,14 @@ window.SITE_DATA = {
       title: "Сезон 2027",
       note: "Расписание матчей появится перед стартом сезона в марте 2027",
       teams: [
-        { id: "cska", name: "ЦСКА", city: null, logo: null, players: [] },
-        { id: "spartak", name: "Спартак", city: null, logo: null, players: [] },
-        { id: "lokomotiv", name: "Локомотив", city: null, logo: null, players: [] },
-        { id: "dinamo", name: "Динамо", city: null, logo: null, players: [] },
-        { id: "rodina", name: "Родина", city: null, logo: null, players: [] },
-        { id: "chertanovo", name: "Чертаново", city: null, logo: null, players: [] },
-        { id: "master-saturn", name: "Мастер-Сатурн", city: null, logo: null, players: [] },
-        { id: "vityaz", name: "Витязь", city: null, logo: null, players: [] }
+        { id: "cska", name: "ЦСКА", city: null, logo: "assets/teams/2027/cska.svg", players: [] },
+        { id: "spartak", name: "Спартак", city: null, logo: "assets/teams/2027/spartak.svg", players: [] },
+        { id: "lokomotiv", name: "Локомотив", city: null, logo: "assets/teams/2027/lokomotiv.svg", players: [] },
+        { id: "dinamo", name: "Динамо", city: null, logo: "assets/teams/2027/dinamo.svg", players: [] },
+        { id: "rodina", name: "Родина", city: null, logo: "assets/teams/2027/rodina.svg", players: [] },
+        { id: "chertanovo", name: "Чертаново", city: null, logo: "assets/teams/2027/chertanovo.png", players: [] },
+        { id: "master-saturn", name: "Мастер-Сатурн", city: null, logo: "assets/teams/2027/master-saturn.png", players: [] },
+        { id: "vityaz", name: "Витязь", city: null, logo: "assets/teams/2027/vityaz.png", players: [] }
       ],
       matches: [],
       pointsOverride: null
