@@ -271,8 +271,7 @@ a.card:hover { transform: translateY(-3px); border-color: var(--c-line-strong); 
 .stat__value {
   font-family: var(--font-display); font-weight: 700;
   font-size: clamp(36px, 6vw, 64px); line-height: 1;
-  background: var(--g-copper); -webkit-background-clip: text; background-clip: text;
-  color: var(--c-copper-light); -webkit-text-fill-color: transparent;
+  color: var(--c-copper-light);
 }
 .stat__label { color: var(--c-muted); font-size: 15px; }
 
@@ -476,6 +475,13 @@ a.card:hover { transform: translateY(-3px); border-color: var(--c-line-strong); 
 /* ---------- Печать (A4, без меню, светлый фон) ---------- */
 @media print {
   @page { size: A4; margin: 16mm 14mm; }
+  /* В PDF — сплошной цвет вместо градиента по буквам: градиент с обрезкой
+     по глифам iOS рисует через раз (число то пропадает, то идёт плашкой). */
+  .stat__value {
+    background: none; color: var(--c-copper);
+    -webkit-background-clip: border-box; background-clip: border-box;
+    -webkit-text-fill-color: var(--c-copper);
+  }
   :root {
     --c-bg: #fff; --c-surface: #fff; --c-surface-2: #f6f1ee;
     --c-text: #111; --c-muted: #444; --c-line: #d9cfc9; --c-line-strong: #b9a79c;
@@ -529,4 +535,9 @@ img.team-logo[src*="teams/2027/"] { padding: 2px; }
 /* Мастер-Сатурн — тёмно-синий шрифтовой знак: белый кружок, как в оригинале */
 img.team-emblem[src*="master-saturn"],
 img.team-logo[src*="master-saturn"] { background: #fff !important; padding: 6px; filter: none; }
-@media print { img.team-emblem[src*="master-saturn"], img.team-logo[src*="master-saturn"] { background: #fff !important; } }
+@media print {
+  img.team-emblem[src*="master-saturn"], img.team-logo[src*="master-saturn"] { background: #fff !important; }
+  /* На слайдах общее правило эмблем перебивает по весу — тёмно-синий знак
+     сливался с фоном. Белый кружок нужен именно ему. */
+  .slide .teams img.team-emblem[src*="master-saturn"] { background: #fff !important; }
+}

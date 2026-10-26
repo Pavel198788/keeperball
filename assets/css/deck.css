@@ -122,6 +122,7 @@
 .facts-grid li { display: flex; flex-direction: column; gap: 8px; }
 .facts-grid b { font-family: var(--font-display); font-size: clamp(18px, 1.6vw + 8px, 30px); line-height: 1.15; color: var(--c-copper-light); }
 .facts-grid span { color: var(--c-muted); }
+.facts-grid--2 b { font-size: clamp(16px, 1vw + 8px, 22px); }
 
 .teams { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .teams li {
@@ -137,8 +138,7 @@
 }
 .media__stat b {
   font-family: var(--font-display); font-size: clamp(34px, 5vw, 72px); line-height: 1.05;
-  background: var(--g-copper); -webkit-background-clip: text; background-clip: text; color: transparent;
-  -webkit-text-fill-color: transparent;
+  color: var(--c-copper-light);
 }
 .media__stat span { color: var(--c-muted); font-size: clamp(14px, 0.8vw + 8px, 18px); }
 
@@ -175,6 +175,7 @@ html:not(.js) .slide { min-height: 70vh; }
 @media (min-width: 760px) {
   .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .facts-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .facts-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .awards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .reasons { grid-template-columns: repeat(6, minmax(0, 1fr)); }
   .reason { grid-column: span 2; }
@@ -234,6 +235,7 @@ html:not(.js) .cover-shield::after { animation: cover-sheen 1.4s ease-in-out 0.5
   to   { opacity: 1; background-position: -20% 0; }
 }
 /* Световой «пьедестал» и медная линия под нижним углом */
+.cover-shield__print { display: none; }   /* только для печати/PDF */
 .cover-shield__base {
   position: absolute; left: 50%; top: calc(100% - 14px); z-index: -1;
   width: 60%; height: 40px; transform: translateX(-50%); pointer-events: none;
@@ -321,7 +323,14 @@ html:not(.js) .cover-shield::after { animation: cover-sheen 1.4s ease-in-out 0.5
   .teams li { font-size: 20px; }
   .step__title, .reason h3, .award h3 { font-size: 23px; }
   .facts-grid b { font-size: 28px; }
-  .media__stat b { font-size: 52px; white-space: nowrap; }
+  /* В PDF — сплошной цвет вместо градиента по буквам: градиент с обрезкой
+     по глифам iOS рисует через раз (цифра то пропадает, то идёт плашкой). */
+  .media__stat b {
+    font-size: 52px; white-space: nowrap;
+    background: none; color: var(--c-copper-light);
+    -webkit-background-clip: border-box; background-clip: border-box;
+    -webkit-text-fill-color: var(--c-copper-light);
+  }
   .media__stat span { font-size: 18px; }
   .slide__banner { font-size: 26px; }
   .slide__logo { width: 170px; }
@@ -341,10 +350,13 @@ html:not(.js) .cover-shield::after { animation: cover-sheen 1.4s ease-in-out 0.5
     width: 196mm; height: 168mm; isolation: auto;
   }
   .cover-shield::before, .cover-shield::after, .cover-shield__base { display: none !important; animation: none !important; }
-  .cover-shield picture { width: 100%; height: 100%; }
-  .cover-shield__img {
-    content: url("../brand/shield-print.png");
-    width: 100%; height: 100%; filter: none; mix-blend-mode: normal;
+  /* Щит для печати — отдельная картинка в разметке, а не content: url() и не фон:
+     часть сборок headless Chromium и то и другое в печати игнорирует, и обложка
+     уходит в PDF без щита. Настоящий <img> печатают все. */
+  .cover-shield picture { display: none; }
+  .cover-shield__print {
+    display: block; width: 100%; height: 100%;
+    object-fit: contain; filter: none; mix-blend-mode: normal;
   }
   .slide.slide--hero .slide__eyebrow { margin-top: 0; font-size: 13px; }
   .slide.slide--hero .slide__title { font-size: 36px; max-width: 24ch; margin-top: 10px; color: #F4EEE8; }
@@ -355,6 +367,8 @@ html:not(.js) .cover-shield::after { animation: cover-sheen 1.4s ease-in-out 0.5
   .cover-meta dd { font-size: 16px; }
   .cover-org { margin-top: 0; padding-top: 16px; font-size: 13px; color: #9a908a; }
   .steps, .facts-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .facts-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .facts-grid--2 b { font-size: 20px; }
   .reasons { grid-template-columns: repeat(6, minmax(0, 1fr)); }
   .reason { grid-column: span 2; } .reason:nth-child(n+4) { grid-column: span 3; }
   .reason { padding: 12px 16px; }
