@@ -556,7 +556,8 @@ img.team-logo[src*="master-saturn"] { background: #fff !important; padding: 6px;
 .photo-row { display: grid; gap: 16px; margin-top: 24px; }
 @media (min-width: 760px) { .photo-row { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; } }
 .photo-row figure { margin: 0; }
-.photo-row img { display: block; width: 100%; height: auto; border-radius: 12px; }
+/* Одна высота у всех снимков: общая пропорция 1,86 — у фото 1,80…1,93, обрезка меньше 4 % по краю */
+.photo-row img { display: block; width: 100%; height: auto; aspect-ratio: 1386 / 744; object-fit: cover; border-radius: 12px; }
 .photo-row figcaption { margin-top: 8px; font-size: 14px; color: var(--c-muted); }
 
 /* Фото награждения Кубка Игоря Акинфеева под цифрой медиаохвата — целиком */
