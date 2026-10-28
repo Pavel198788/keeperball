@@ -1,0 +1,381 @@
+/* ==========================================================================
+   Презентация «Кипербол и турнир» (prezentatsiya.html) — по ТЗ «ПРОЕКТ-2».
+   Движок и базовые блоки слайдов — deck.css; здесь только новые блоки.
+   Отдельная страница без шапки и подвала сайта.
+   ========================================================================== */
+
+.pz .deck { height: 100vh; height: 100dvh; min-height: 560px; }
+
+.pz-text { margin: 0; max-width: 760px; font-size: clamp(14px, 0.7vw + 9px, 18px); line-height: 1.55; color: var(--c-text); }
+.pz-kicker { margin: 0; font-weight: 700; color: var(--c-copper-light); }
+.slide--split .slide__inner > .pz-text { max-width: min(680px, 100%); }
+.slide__banner .copper { color: var(--c-copper-light); }
+
+/* ---------- Оглавление ---------- */
+.toc { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; width: 100%; max-width: 900px; }
+.toc li {
+  display: flex; gap: clamp(14px, 2vw, 28px); align-items: center;
+  padding: clamp(16px, 2vw, 28px); background: rgba(23,23,27,0.86);
+  border: 1px solid var(--c-line); border-left: 5px solid var(--c-copper); border-radius: var(--radius);
+}
+.toc h3 { margin: 0 0 6px; font-size: clamp(17px, 1.2vw + 8px, 26px); }
+.toc p { margin: 0; color: var(--c-muted); font-size: clamp(14px, 0.6vw + 9px, 18px); }
+.toc__num {
+  flex: 0 0 auto; width: clamp(54px, 6vw, 84px); text-align: center;
+  font: 700 clamp(34px, 4vw, 60px)/1 var(--font-display); color: var(--c-copper-light);
+}
+
+/* ---------- Разделитель части ---------- */
+.slide--part::before { background: linear-gradient(90deg, rgba(10,10,12,0.94) 0%, rgba(10,10,12,0.75) 50%, rgba(10,10,12,0.45) 100%); }
+.slide--part .slide__title { font-size: clamp(28px, 3.4vw + 8px, 60px); max-width: 18ch; }
+.part__num {
+  font: 700 clamp(90px, 14vw, 220px)/0.9 var(--font-display);
+  color: var(--c-copper); opacity: 0.85;
+  margin-bottom: -6px; letter-spacing: 0.04em;
+}
+
+/* ---------- Цели ---------- */
+.goals { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; width: 100%; }
+.goal {
+  background: rgba(23,23,27,0.86); border: 1px solid var(--c-line); border-radius: var(--radius);
+  padding: clamp(14px, 1.6vw, 24px); font-size: clamp(14px, 0.8vw + 8px, 18px); line-height: 1.45;
+}
+.goal h3 { margin: 10px 0 8px; font-size: clamp(16px, 1.1vw + 8px, 24px); }
+.goal p { margin: 0; color: var(--c-muted); }
+.goal:last-child { border-color: var(--c-copper); }
+
+/* ---------- Приказы ---------- */
+.docs { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; width: 100%; }
+.doc {
+  display: flex; flex-direction: column; gap: 4px;
+  padding: clamp(16px, 2vw, 28px); background: rgba(23,23,27,0.88);
+  border: 1px solid var(--c-line); border-top: 4px solid var(--c-copper); border-radius: var(--radius);
+}
+.doc__tag { font: 600 11px/1.3 var(--font-display); letter-spacing: 0.14em; text-transform: uppercase; color: var(--c-copper); }
+.doc__num { font: 700 clamp(34px, 4vw, 60px)/1.05 var(--font-display); color: var(--c-copper-light); }
+.doc__date { font-weight: 700; font-size: clamp(15px, 0.8vw + 9px, 19px); }
+.doc p { margin: 10px 0 0; color: var(--c-muted); font-size: clamp(14px, 0.7vw + 9px, 18px); line-height: 1.5; }
+
+/* ---------- Формат матча: 1 + 2 = 3 ---------- */
+.match-format { display: grid; gap: 10px; width: 100%; align-items: stretch; }
+.mf-half {
+  display: flex; flex-direction: column; gap: 4px;
+  padding: clamp(14px, 1.6vw, 24px); background: rgba(23,23,27,0.88);
+  border: 1px solid var(--c-line); border-radius: var(--radius);
+}
+.mf-half h3 { margin: 4px 0 0; font-size: clamp(18px, 1.3vw + 8px, 26px); }
+.mf-half p { margin: 0; color: var(--c-muted); font-size: clamp(14px, 0.6vw + 9px, 17px); }
+.mf-points { margin-top: auto; padding-top: 10px; font: 700 clamp(22px, 2vw + 8px, 38px)/1.1 var(--font-display); color: var(--c-copper-light); }
+.mf-half--total { border-color: var(--c-copper); }
+.mf-plus { align-self: center; justify-self: center; font: 700 28px/1 var(--font-display); color: var(--c-copper); }
+
+/* ---------- Характеристики (крупная цифра + подпись) ---------- */
+.specs { margin: 0; padding: 0; list-style: none; width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.specs li {
+  display: flex; flex-direction: column; gap: 4px; padding: 12px 16px;
+  background: rgba(23,23,27,0.86); border: 1px solid var(--c-line); border-radius: var(--radius-sm);
+}
+.specs b { font: 700 clamp(18px, 1.5vw + 8px, 30px)/1.1 var(--font-display); color: var(--c-copper-light); }
+.specs span { color: var(--c-muted); font-size: clamp(13px, 0.5vw + 9px, 16px); line-height: 1.35; }
+.points--2 { width: 100%; }
+.specs--4 b { font-size: clamp(16px, 1vw + 8px, 22px); }
+
+/* ---------- Нововведения второго тайма ---------- */
+.rules { margin: 0; padding: 0; list-style: none; counter-reset: rule; width: 100%; display: grid; gap: 10px; }
+.rules li {
+  position: relative; counter-increment: rule; padding: 12px 14px 12px 56px;
+  background: rgba(23,23,27,0.86); border: 1px solid var(--c-line); border-radius: var(--radius-sm);
+}
+.rules li::before {
+  content: counter(rule); position: absolute; left: 14px; top: 12px;
+  width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--g-copper); color: var(--c-on-copper); font: 700 14px/1 var(--font-display);
+}
+.rules h3 { margin: 2px 0 4px; font-size: clamp(15px, 0.8vw + 9px, 19px); }
+.rules p { margin: 0; color: var(--c-muted); font-size: clamp(13px, 0.5vw + 9px, 16px); line-height: 1.45; }
+
+/* ---------- Русский угловой ---------- */
+.corner { display: grid; gap: 18px; width: 100%; align-items: center; }
+.corner__text { display: grid; gap: 14px; }
+.corner__fig { margin: 0; }
+.corner__fig svg { display: block; width: 100%; height: auto; border: 1px solid var(--c-line-strong); border-radius: var(--radius); }
+.corner__fig figcaption { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 10px; color: var(--c-muted); font-size: 14px; }
+.dot { display: inline-block; width: 10px; height: 10px; margin-right: 8px; border-radius: 50%; vertical-align: 0; }
+.dot--def { background: #f4efeb; }
+.dot--att { background: var(--c-copper); }
+
+/* ---------- Две колонки ---------- */
+.cols { display: grid; gap: 18px; width: 100%; }
+.cols__head { margin: 0 0 10px; font-size: clamp(15px, 0.8vw + 9px, 20px); color: var(--c-copper-light); }
+
+/* ---------- Лесенка развития ---------- */
+.ladder { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; width: 100%; max-width: 620px; }
+.ladder li {
+  padding: 10px 16px; background: rgba(23,23,27,0.86); border: 1px solid var(--c-line); border-radius: var(--radius-sm);
+  font-weight: 700; font-size: clamp(14px, 0.8vw + 8px, 19px);
+}
+.ladder li:nth-child(1) { border-left: 5px solid #ebbf9f; }
+.ladder li:nth-child(2) { border-left: 5px solid #d9a283; margin-left: 4%; }
+.ladder li:nth-child(3) { border-left: 5px solid #c98b6b; margin-left: 8%; }
+.ladder li:nth-child(4) { border-left: 5px solid #8f5a40; margin-left: 12%; }
+
+/* ---------- Метрики ---------- */
+.metrics { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.metrics li {
+  padding: 8px 14px; border: 1px solid var(--c-copper); border-radius: 999px;
+  background: rgba(10,10,12,0.6); font-weight: 700; font-size: clamp(13px, 0.5vw + 9px, 16px);
+}
+.metrics li:last-child { border-style: dashed; color: var(--c-muted); }
+
+/* ---------- Причины на 6 карточек ---------- */
+.reasons--6 .reason h3 { font-size: clamp(15px, 0.9vw + 8px, 21px); }
+
+/* ---------- Карта проезда ---------- */
+.route-map { display: grid; gap: 16px; width: 100%; align-items: start; }
+.route-map__fig { margin: 0; position: relative; }
+.route-map__fig svg { display: block; width: 100%; height: auto; max-height: 64vh; border: 1px solid var(--c-line-strong); border-radius: var(--radius); background: #101014; }
+.route-map__fig figcaption { margin-top: 8px; color: var(--c-muted); font-size: 13px; }
+.route-map__photo {
+  display: grid; place-items: center; min-height: 120px; padding: 14px;
+  border: 1px dashed var(--c-line-strong); border-radius: var(--radius); background: rgba(23,23,27,0.7);
+  text-align: center; font-size: 14px;
+}
+.route-map__side { display: grid; gap: 8px; align-content: start; }
+.route-map__addr { margin: 0; font-size: 14px; color: var(--c-muted); }
+.route-map__addr b { color: var(--c-text); }
+.route-map__hint { margin: 0; font-size: 12.5px; color: var(--c-muted); }
+.route-map__photo.placeholder { min-height: 90px; margin: 0; }
+/* Интерьер академии — светлое фото: под текстом нужен запас контраста */
+.slide--a35 .slide__bg { filter: brightness(0.46) saturate(0.9); }
+.slide--a35 .specs--4 b { font-size: clamp(14px, 0.8vw + 7px, 19px); }  /* «Раздевалки» не влезало в колонку */
+.slide--a35::before { background: linear-gradient(90deg, rgba(10,10,12,0.95) 0%, rgba(10,10,12,0.8) 45%, rgba(10,10,12,0.45) 100%); }
+.route-map__photo--img { display: block; width: 100%; height: auto; max-height: 118px; object-fit: cover;
+  padding: 0; border: 1px solid var(--c-line-strong); border-style: solid; }
+.routes { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.routes a, .routes .route {
+  display: grid; grid-template-columns: 30px minmax(0, 1fr) auto; gap: 10px; align-items: center;
+  padding: 7px 12px; background: rgba(23,23,27,0.88); border: 1px solid var(--c-line); border-radius: var(--radius-sm);
+  color: var(--c-text); text-decoration: none; font-size: 14px; line-height: 1.3;
+}
+.routes a:hover, .routes a:focus-visible, .routes a.is-hot { border-color: var(--c-copper); background: var(--c-surface-2); }
+.routes img { width: 30px; height: 30px; object-fit: contain; }
+.routes small { display: block; color: var(--c-muted); font-size: 12px; }
+.routes b { font-family: var(--font-display); font-size: 14px; color: var(--c-copper-light); white-space: nowrap; text-align: right; }
+.route-map .map-line { transition: stroke-width 0.2s ease, opacity 0.2s ease; }
+.route-map .map-line.is-hot { stroke-width: 4; opacity: 1; }
+
+/* ---------- Месяцы и время матчей ---------- */
+.months { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; width: 100%; }
+.month { padding: 10px 14px; background: rgba(23,23,27,0.86); border: 1px solid var(--c-line); border-radius: var(--radius-sm); }
+.month h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--c-copper); }
+.month p { margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.month span {
+  display: inline-grid; place-items: center; min-width: 38px; height: 38px; padding: 0 6px; border-radius: 8px;
+  background: var(--c-surface-2); font: 700 15px/1 var(--font-display);
+}
+.month .month__final { background: var(--g-copper); color: var(--c-on-copper); height: auto; padding: 5px 8px; line-height: 1.1; }
+.month__final small { display: block; font: 600 9px/1.2 var(--font-body); letter-spacing: 0.1em; text-transform: uppercase; }
+
+.slots { width: 100%; border-collapse: separate; border-spacing: 0; font-size: clamp(13px, 0.5vw + 9px, 16px); background: rgba(23,23,27,0.88); border: 1px solid var(--c-line); border-radius: var(--radius-sm); overflow: hidden; }
+.slots th, .slots td { padding: 9px 14px; text-align: left; border-bottom: 1px solid var(--c-line); }
+.slots th { font: 600 11px/1.3 var(--font-display); letter-spacing: 0.12em; text-transform: uppercase; color: var(--c-copper); }
+.slots tr:last-child td { border-bottom: 0; }
+.slots .num { text-align: center; font-family: var(--font-display); font-weight: 700; color: var(--c-copper-light); }
+
+/* ---------- Календарь ---------- */
+.calendar { width: 100%; }
+.cal { margin: 0; padding: 0; list-style: none; display: grid; gap: 5px; }
+.cal__day {
+  display: grid; grid-template-columns: 62px minmax(0, 1fr); gap: 10px; align-items: center;
+  padding: 5px 8px 5px 12px; background: rgba(23,23,27,0.88); border: 1px solid var(--c-line); border-radius: var(--radius-sm);
+}
+.cal__date { font: 700 15px/1.1 var(--font-display); color: var(--c-copper-light); }
+.cal__games { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.cal__game {
+  display: flex; align-items: center; justify-content: center; gap: 7px; padding: 5px 8px;
+  background: var(--c-surface-2); border-radius: 6px; font-size: 13.5px; font-weight: 700; line-height: 1.2; white-space: nowrap;
+}
+.cal__game img { width: 18px; height: 18px; object-fit: contain; flex: 0 0 auto; }
+.cal__game i { font-style: normal; color: var(--c-copper); }
+
+/* ---------- Формула: шаги ---------- */
+.flow { margin: 0; padding: 0; list-style: none; width: 100%; display: grid; gap: 12px; counter-reset: flow; }
+.flow li {
+  position: relative; padding: clamp(14px, 1.6vw, 24px);
+  background: rgba(23,23,27,0.86); border: 1px solid var(--c-line); border-radius: var(--radius);
+}
+.flow li:last-child { border-color: var(--c-copper); }
+.flow h3 { margin: 6px 0 8px; font-size: clamp(17px, 1.2vw + 8px, 26px); }
+.flow p { margin: 0; color: var(--c-muted); font-size: clamp(14px, 0.7vw + 9px, 18px); line-height: 1.45; }
+
+/* ---------- Награды и финал ---------- */
+.award__cup { width: 48px; height: 48px; color: var(--c-copper-light); margin-bottom: 6px; }
+.award--grand { border-color: var(--c-copper); }
+.media__side { display: grid; gap: 10px; }
+.media__chips { margin: 0; }
+
+/* ---------- Широкие экраны ---------- */
+@media (min-width: 760px) {
+  .goals { grid-template-columns: 1fr 1fr 1.4fr; }
+  .docs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .match-format { grid-template-columns: 1fr auto 1fr auto 1fr; }
+  .specs { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .points--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rules { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .corner { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+  .cols { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); }
+  .reasons--6 .reason, .reasons--6 .reason:nth-child(n+4) { grid-column: span 2; }
+  .route-map { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr); }
+  .flow { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+@media (max-width: 759px) {
+  .cal__games { grid-template-columns: 1fr; }
+  .cal__game { justify-content: flex-start; white-space: normal; }
+  .mf-plus { display: none; }
+}
+
+/* ---------- Печать и PDF ---------- */
+@media print {
+  .slide__inner { zoom: 1.08; }
+  .slide--dense .slide__inner { zoom: 1; gap: 12px; }
+  .slide--dense .slide__title { font-size: 30px; }
+  .pz-text { font-size: 17px; }
+  .slide--dense .pz-text { font-size: 15px; }
+  .slide--dense .points li { font-size: 15px; padding: 8px 14px 8px 36px; }
+  .slide--dense .points li::before { left: 14px; top: 0.95em; }
+  .slide--dense .slide__banner { font-size: 18px; padding: 12px 18px; }
+  .slide--dense .slide__note { font-size: 13px; }
+  .slide--dense .slide__eyebrow { font-size: 11px; }
+  .goals { grid-template-columns: 1fr 1fr 1.4fr; }
+  .docs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .match-format { grid-template-columns: 1fr auto 1fr auto 1fr; }
+  .specs { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .specs b { font-size: 24px; }
+  .specs--4 b { font-size: 20px; }
+  .slide--split .specs--4 b { font-size: 17px; }
+  .specs span { font-size: 14px; }
+  .points--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rules { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .rules h3 { font-size: 17px; } .rules p { font-size: 14px; }
+  .corner { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+  .cols { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); }
+  .reasons--6 .reason, .reasons--6 .reason:nth-child(n+4) { grid-column: span 2; }
+  .route-map { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr); }
+  .flow { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .flow { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .cal__games { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .cal__game { font-size: 14px; justify-content: center !important; white-space: nowrap !important; }
+  .cal__day { padding: 4px 8px 4px 12px; }
+  .toc h3 { font-size: 26px; } .toc p { font-size: 18px; }
+  .doc p { font-size: 17px; }
+  .mf-half p { font-size: 16px; }
+  .metrics li { font-size: 15px; }
+  .slots { font-size: 15px; }
+  .slide--part .slide__title { font-size: 54px; }
+  .part__num { font-size: 150px; }
+  .slide--last .slide__inner { zoom: 1; }
+  .pz-end__logo { width: 150mm; }
+  .route-map__fig svg { width: 100%; height: auto; max-height: none; }
+  .route-map__fig figcaption { font-size: 11px; }
+  .slide--map .slide__title { font-size: 28px; }
+  .cover-meta > div { padding: 0 12px; }
+  .cover-meta dt { letter-spacing: 0.1em; }
+  .cover-meta dd { font-size: 15px; }
+  .route-map { grid-template-columns: 92mm minmax(0, 1fr) !important; gap: 8mm; }
+  .routes { grid-template-columns: minmax(0, 1fr); gap: 5px; }
+  .routes a { grid-template-columns: 26px minmax(0, 1fr) auto; padding: 4px 10px; }
+  .routes img { width: 26px; height: 26px; }
+  .routes small { display: inline; margin-left: 6px; font-size: 11.5px; }
+  .routes b { font-size: 12.5px; }
+  .routes a { padding: 5px 10px; font-size: 13px; }
+  .route-map__photo.placeholder { min-height: 70px; }
+}
+
+/* Эмблема Мастер-Сатурна тёмная — на тёмном фоне нужна белая подложка, как на сайте */
+img[src*="master-saturn"], image[href*="master-saturn"] { background: #fff; border-radius: 50%; padding: 1px; }
+
+
+/* ---------- Слайд «Весь турнир — в Академии А35»: фото рядом с текстом ---------- */
+.a35 { display: grid; gap: 18px; width: 100%; align-items: center; }
+.a35__text { display: grid; gap: clamp(10px, 1.4vw, 18px); min-width: 0; }
+.a35__fig { margin: 0; min-width: 0; }
+.a35__fig img {
+  width: 100%; height: auto; object-fit: cover;
+  border: 1px solid var(--c-line-strong); border-radius: var(--radius);
+}
+.a35__fig figcaption { margin-top: 8px; color: var(--c-muted); font-size: 14px; }
+/* Фото занимает больше половины слайда, поэтому спеки идут 2 × 2, а не в ряд */
+.a35__text .specs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.a35__text .specs span { font-size: clamp(12px, 0.4vw + 9px, 14px); }
+
+@media (min-width: 900px) {
+  .a35 { grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 26px; }
+  /* Слайд плотный: баннер во всю ширину, поэтому кегль и отступы чуть меньше */
+  .slide--a35 .slide__inner { gap: clamp(10px, 1.5vw, 18px); }
+  .slide--a35 .slide__banner { padding: 12px 18px; font-size: clamp(15px, 1.1vw + 6px, 22px); }
+  .a35__fig img { max-height: 62vh; }
+}
+
+@media print {
+  .a35 { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 20px; }
+  /* В печати колонка ещё уже: четыре спеки в ряд рвут слова — ставим 2 × 2 */
+  .a35__text .specs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .a35__text .specs span { overflow-wrap: normal; font-size: 13px; }
+  .a35__fig img { max-height: 128mm; }
+  .a35__fig figcaption { margin-top: 6px; font-size: 12px; }
+}
+
+/* ---------- Единая сетка деки ----------
+   Рабочая ширина листа делится на 12 колонок: блоки занимают все 12,
+   заголовки и сплошной текст — 10 (≈221 мм, ~85 знаков в строке).
+   До этого у каждого блока была своя максимальная ширина (620…1100 px),
+   а заголовки мерились в знаках — поэтому правый край гулял от 32% до 99%. */
+.pz { --col-text: 83.3%; }
+
+.pz .slide:not(.slide--cover) .slide__title,
+.pz .slide__lead,
+.pz .slide__note,
+.pz .pz-text,
+.pz .pz-kicker { max-width: var(--col-text); }
+
+/* Блоки — на всю рабочую ширину */
+.pz .toc,
+.pz .ladder,
+.pz .media { max-width: 100%; }
+
+/* В светлой теме фоновый снимок в печати отключён, и сужать текст под него незачем */
+.pz.theme-cska .slide--split .slide__inner > *:not(.slide__eyebrow),
+.pz.theme-cska .slide--split .slide__inner > .pz-text { max-width: var(--col-text); }
+.pz.theme-cska .slide--split .slide__inner > .toc,
+.pz.theme-cska .slide--split .slide__inner > .ladder,
+.pz.theme-cska .slide--split .slide__inner > .media { max-width: 100%; }
+
+@media (max-width: 759px) { .pz { --col-text: 100%; } }
+
+/* Карточки формата матча в печати не растягивались на всю ширину:
+   колонки `1fr auto 1fr auto 1fr` в печатном проходе считались по содержимому.
+   Знаки «+» в печати и так скрыты, поэтому задаём три равные колонки. */
+@media print {
+  .pz .match-format { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .pz .mf-plus { display: none !important; }
+}
+
+/* ---------- Красная строка над заголовком ----------
+   Надстрочник «ПЕРВЫЙ ТАЙМ», «СОДЕРЖАНИЕ» и т.п. был 12 px и терялся.
+   Кегль поднят до 17, начертание плотнее, разрядка убавлена с 0.16 до 0.1em —
+   на крупном кегле прежняя разрядка расползалась. */
+.pz .slide__eyebrow {
+  font-size: 17px; font-weight: 700; letter-spacing: 0.1em;
+}
+@media print {
+  .pz .slide__eyebrow { font-size: 17px !important; }
+  .pz .slide--dense .slide__eyebrow { font-size: 16px !important; }
+  .pz .slide.slide--hero .slide__eyebrow { font-size: 15px !important; }
+}
+
+/* Слайды, где содержимое чуть выше листа: масштаб всего слайда −10%,
+   а не уменьшение шрифтов по отдельности — пропорции и ритм сохраняются.
+   Эти два слайда не помещались в лист и до правок, на 3 и 5 мм. */
+@media print {
+  .pz .slide--tight .slide__inner { zoom: 1.04; }
+}

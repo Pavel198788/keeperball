@@ -1,0 +1,334 @@
+/* ==========================================================================
+   Презентация, редакция 5 (prezentatsiya-redaktsiya-5.html) — правки
+   «00. Изменения в Презентации-1». Подключается после deck-cska.css;
+   только светлая тема, логотип — чёрный объёмный (kiperbol-3d-chernyy.svg).
+   ========================================================================== */
+
+/* ---------- Обложка ---------- */
+.r4 .r4-cover .slide__inner,
+.js .r4 .r4-cover .slide__inner {
+  justify-content: center; align-items: center; text-align: center;
+  gap: clamp(8px, 1.6vh, 16px); padding: 4vh 0;
+}
+.r4-logos {
+  display: flex; align-items: center; justify-content: center;
+  gap: clamp(14px, 2.4vw, 34px); margin-bottom: 1vh;
+}
+.r4-logos__kb { width: clamp(180px, 24vw, 340px); height: auto; }
+.r4-logos__sep { align-self: stretch; width: 1px; margin: 10px 0; background: rgba(16,35,77,0.25); }
+.r4-logos__name {
+  font: 700 clamp(15px, 1.3vw + 4px, 24px)/1.15 var(--font-display);
+  color: #111; text-align: left; letter-spacing: 0.01em;
+}
+.r4-logos__name--a35 { font-size: clamp(30px, 3vw + 6px, 54px); line-height: 1; }
+.r4-logos__name--a35 small {
+  display: block; margin-top: 6px; font: 600 clamp(10px, 0.5vw + 6px, 13px)/1.2 var(--font-body);
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-muted);
+}
+.r4-presents {
+  margin: 0; font: 700 clamp(14px, 0.6vw + 9px, 18px)/1.3 var(--font-display);
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--c-copper);
+}
+.r4-titles { margin: 0; padding: 0; list-style: none; display: grid; gap: clamp(6px, 1.2vh, 12px); }
+.r4-titles li { display: grid; gap: 2px; }
+.r4-titles span { font-size: clamp(15px, 0.7vw + 9px, 20px); color: var(--c-muted); font-weight: 600; }
+.r4-titles b { font: 700 clamp(24px, 2.4vw + 8px, 42px)/1.12 var(--font-display); color: var(--c-text); }
+.r4-teams {
+  margin: 4px 0 0; font: 700 clamp(14px, 0.6vw + 9px, 18px)/1.3 var(--font-body); color: var(--c-text);
+}
+.r4-cover .cover-meta { margin: 0; }
+.r4-venue, .r4-cover .cover-org { margin: 0; padding: 0; font-size: clamp(13px, 0.5vw + 9px, 16px); color: var(--c-text); }
+.r4-cover .cover-org { color: var(--c-muted); }
+.r4-part {
+  margin: 1.5vh 0 0; padding: 10px 26px; border-top: 3px solid var(--c-copper);
+  font: 700 clamp(16px, 0.9vw + 9px, 24px)/1.25 var(--font-display); color: var(--c-text);
+}
+.r4-part span {
+  display: block; font-size: 0.62em; letter-spacing: 0.16em; text-transform: uppercase; color: var(--c-copper);
+}
+@media (max-width: 759px) {
+  .r4-logos { flex-wrap: wrap; }
+  .r4-logos__sep { display: none; }
+}
+
+/* ---------- Концепция: актуальность + цели ---------- */
+.r4-concept__grid { display: grid; gap: 18px; width: 100%; align-items: start; }
+.r4-concept__why { display: grid; gap: 14px; }
+.r4-concept .pz-text { max-width: none; }
+.r4-goals { grid-template-columns: 1fr !important; gap: 10px; }
+.r4-goals .goal { display: grid; grid-template-columns: auto 1fr; column-gap: 14px; align-items: start; }
+.r4-goals .goal .reason__num { grid-row: span 2; }
+.r4-goals .goal h3 { margin: 0 0 4px; }
+.r4-goals .goal:last-child { border-color: var(--c-line); }
+@media (min-width: 760px) {
+  .r4-concept__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 26px; }
+}
+
+/* ---------- Формат матча: фора под «1 очко» ---------- */
+.r4-fora { margin: 4px 0 0 !important; color: var(--c-text) !important; font-weight: 700; }
+
+/* ---------- Зачем турнир нужен ---------- */
+.r4-reasons .reason p + p { margin-top: 6px; }
+.r4-reasons .reason p b { color: var(--c-text); }
+.r4-dash { margin: 0; padding: 0; list-style: none; color: var(--c-muted); }
+.r4-dash li::before { content: "— "; color: var(--c-copper); }
+
+/* ---------- Академия: три характеристики ---------- */
+.r4-specs3 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+.r4-specs3 li:last-child { grid-column: 1 / -1; }
+
+/* ---------- Система проведения: итоговая строка ---------- */
+.slots .r4-total td { font-weight: 700; background: var(--c-surface-2); }
+
+/* ---------- Финал: контакты ---------- */
+.r4-end .slide__inner { align-items: center; text-align: center; }
+.r4-contacts {
+  margin-top: 10px; padding: 18px 28px; min-width: min(560px, 100%);
+  background: var(--c-surface); border: 1px solid var(--c-line); border-top: 4px solid var(--c-copper);
+  border-radius: var(--radius); text-align: left;
+}
+.r4-contacts h3 { margin: 0 0 10px; font-size: clamp(15px, 0.8vw + 9px, 20px); }
+.r4-contacts dl { margin: 0; display: grid; gap: 6px; }
+.r4-contacts dl > div { display: grid; grid-template-columns: 150px 1fr; gap: 12px; align-items: baseline; }
+.r4-contacts dt { font: 600 12px/1.3 var(--font-display); letter-spacing: 0.1em; text-transform: uppercase; color: var(--c-copper); }
+.r4-contacts dd { margin: 0; font-size: clamp(15px, 0.6vw + 10px, 19px); font-weight: 700; color: var(--c-text); }
+.r4-contacts a { color: var(--c-text); text-decoration: none; }
+
+/* ---------- Печать ---------- */
+@media print {
+  .r4 .r4-cover .slide__inner, .js .r4 .r4-cover .slide__inner {
+    justify-content: center !important; padding: 0 !important; gap: 9px !important;
+  }
+  .r4-logos { gap: 9mm; margin-bottom: 3mm; }
+  .r4-logos__kb { width: 92mm; }
+  .r4-logos__name { font-size: 21px; }
+  .r4-logos__name--a35 { font-size: 46px; }
+  .r4-presents { font-size: 15px; }
+  .r4-titles { gap: 8px; }
+  .r4-titles span { font-size: 17px; }
+  .r4-titles b { font-size: 34px; }
+  .r4-teams { font-size: 17px; }
+  .r4-cover .cover-meta dd { font-size: 16px; }
+  .r4-venue, .r4-cover .cover-org { font-size: 14px; padding: 0; margin: 0; }
+  .r4-part { font-size: 21px; margin-top: 4mm; }
+
+  .r4-concept__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 8mm; }
+  .r4-goals .goal { font-size: 15px; padding: 10px 14px; }
+  .r4-goals .goal h3 { font-size: 18px; }
+
+  .r4-reasons .reason p, .r4-dash { font-size: 15px; }
+  .r4-reasons .reason h3 { font-size: 18px; }
+
+  .r4-end .pz-end__logo { width: 120mm !important; }
+  .r4-end .slide__title { font-size: 40px; }
+  .r4-contacts { min-width: 150mm; }
+  .r4-contacts dd { font-size: 19px; }
+}
+
+/* ---------- Доводка после первого прогона ---------- */
+.r4-logos__sep { align-self: center; height: clamp(48px, 7vh, 84px); margin: 0; }
+.r4-contacts dl > div { grid-template-columns: 180px 1fr; }
+@media print {
+  .r4-logos__sep { height: 26mm; }
+}
+
+/* ---------- Номер слайда внизу по центру (обложка без номера) ----------
+   Под номер внизу слайда отведена своя полоса — блоки в неё не заходят.
+   На экране (с JS) слайд прокручивается, поэтому номер живёт не в слайде,
+   а в полосе под ним (.deck__num, обновляется скриптом внизу страницы). */
+.slide__num, .deck__num {
+  min-width: 34px; padding-top: 6px; border-top: 3px solid var(--c-copper);
+  font: 700 clamp(15px, 0.6vw + 10px, 20px)/1 var(--font-display); text-align: center;
+  color: var(--c-text); pointer-events: none;
+}
+.slide__num { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 2; }
+.r4 .slide { padding-bottom: 64px; }
+
+.deck__num { display: none; }
+.js .r4 .slide__num { display: none; }
+.js .r4 .deck__stage { --num-strip: 46px; }
+.js .r4 .slide { inset: 0 0 var(--num-strip) 0; padding-bottom: clamp(20px, 4vw, 56px); }
+.js .r4 .deck__num {
+  display: block; position: absolute; left: 50%; bottom: 6px; transform: translateX(-50%);
+}
+.js .r4 .deck__num[hidden] { display: none; }
+
+@media print {
+  .r4 .slide, .js .r4 .slide { padding-bottom: 21mm !important; }
+  .r4 .slide__num, .js .r4 .slide__num { display: block !important; bottom: 7mm; font-size: 18px; min-width: 9mm; }
+  .deck__num { display: none !important; }
+}
+
+/* ---------- Сноски: один кегль и одно начертание на всех слайдах ----------
+   В печати слайды масштабируются по-разному (zoom 1.08 обычные, 1.04 «tight»,
+   1 плотные), поэтому кегль делится на zoom — на листе везде выходит 18 px. */
+.pz .slide__note { font-size: clamp(13px, 0.5vw + 9px, 16px); font-weight: 400; line-height: 1.45; }
+.pz .slide__note b { font-weight: inherit; }
+@media print {
+  .pz .slide__note { font-size: calc(18px / 1.08) !important; }
+  .pz .slide--tight .slide__note { font-size: calc(18px / 1.04) !important; }
+  .pz .slide--dense .slide__note { font-size: 18px !important; }
+}
+
+/* ---------- «Часть I» — шапкой второго слайда, а не на обложке ---------- */
+.r4-part--slide {
+  align-self: flex-start; margin: 0 0 4px; padding: 10px 0 0; text-align: left;
+  font-size: clamp(16px, 0.9vw + 9px, 22px);
+}
+@media print { .r4-part--slide { font-size: 26px; margin: 0 0 6mm; padding-top: 3mm; } .r4-part--slide span { font-size: 15px; margin-bottom: 2mm; } }
+
+/* Плотные слайды (кипербатл, «Зачем турнир нужен», продвижение) с полосой под номер
+   не помещались в лист — весь слайд чуть мельче, пропорции сохраняются. */
+@media print {
+  .pz .r4-fit .slide__inner { zoom: 0.95 !important; }
+}
+
+/* ---------- Английский логотип KEEPERBALL — в левом нижнем углу, зеркально русскому ----------
+   Той же высоты, что русский: латинская надпись шире, поэтому ширина × 1.105
+   (viewBox 603.7 против 546.4 при одной высоте). */
+.slide__mark--en {
+  right: auto; left: clamp(14px, 1.8vw, 30px);
+  width: calc(clamp(72px, 7.5vw, 112px) * 1.105);
+}
+@media print {
+  .slide__mark--en { right: auto; left: 11mm; width: 33.15mm; }
+}
+
+/* ---------- Обложка: логотипы А35 и Фонда в верхних углах, КИПЕРБОЛ по центру,
+   название посередине, остальное — внизу слайда ---------- */
+.r4 .r4-cover .slide__inner,
+.js .r4 .r4-cover .slide__inner { justify-content: space-between; padding: 2vh 0 1vh; }
+.r4-logos {
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+  width: 100%; gap: 3vw; margin: 0;
+}
+/* А35 и Фонд — одной высоты, на одной линии с КИПЕРБОЛОМ */
+.r4-logos__side { width: auto; height: clamp(60px, 6.6vw, 112px); }
+.r4-logos__a35 { justify-self: start; }
+.r4-logos__fond { justify-self: end; }
+.r4-logos__kb { width: clamp(190px, 22vw, 360px); }
+.r4-cover__main, .r4-cover__foot {
+  display: flex; flex-direction: column; align-items: center; gap: clamp(8px, 1.4vh, 14px);
+}
+.r4-cover__foot { gap: clamp(6px, 1vh, 10px); }
+.r4-cover .cover-org {
+  font-family: var(--font-display); font-weight: 700; color: var(--c-text);
+  font-size: clamp(15px, 0.7vw + 10px, 20px);
+}
+/* Только экран: в печати страница тоже попадает под max-width 759px,
+   и КИПЕРБОЛ уезжал на вторую строку ниже логотипов А35 и Фонда. */
+@media screen and (max-width: 759px) {
+  .r4-logos { grid-template-columns: 1fr 1fr; }
+  .r4-logos__kb { grid-column: 1 / -1; grid-row: 2; justify-self: center; }
+}
+@media print {
+  .r4 .r4-cover .slide__inner, .js .r4 .r4-cover .slide__inner {
+    justify-content: space-between !important; padding: 0 0 2mm !important;
+  }
+  .r4-logos { margin: 0; gap: 10mm; }
+  .r4-logos__side { width: auto; height: 26mm; }
+  .r4-logos__kb { width: 88mm; }
+  .r4-cover__main { gap: 9px; }
+  .r4-cover__foot { gap: 7px; }
+  .r4-cover .cover-org { font-size: 19px !important; }
+}
+
+/* ---------- Место проведения: два снимка — поле с трибуной и зал ---------- */
+.slide--a35 .a35__fig { display: grid; gap: 8px; }
+.slide--a35 .a35__fig img { max-height: 30vh; width: 100%; object-fit: cover; }
+@media print {
+  .slide--a35 .a35__fig img { max-height: 56mm; }
+}
+
+/* Русский угловой: схема теперь на всю ширину поля (широкая и низкая) — колонке схемы больше места */
+@media (min-width: 900px) { .r4 .corner { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.3fr); } }
+@media print { .r4 .corner { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.3fr) !important; } }
+
+/* ---------- Формат матча: 1 + 2 = 3 ----------
+   Три одинаковые карточки, строки выровнены через subgrid: надзаголовок,
+   название, описание, очки. Очки у всех внизу, на одной линии и одним цветом;
+   между карточками — знаки «+» и «=» в красных кружках. */
+@media (min-width: 760px), print {
+  .pz.r4 .match-format {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) !important;
+    grid-template-rows: auto auto 1fr auto; column-gap: 14px; row-gap: 0; align-items: stretch;
+  }
+  .r4 .mf-half {
+    display: grid; grid-row: 1 / span 4; grid-template-rows: subgrid; row-gap: 6px; align-content: start;
+  }
+  .pz.r4 .mf-plus {
+    display: flex !important; grid-row: 1 / span 4; align-self: center; justify-content: center; align-items: center;
+    width: 42px; height: 42px; border-radius: 50%;
+    background: var(--c-copper); color: #fff; font: 700 26px/1 var(--font-display);
+  }
+}
+.r4 .mf-half, .r4 .mf-half--total { border: 1px solid var(--c-line); }
+.r4 .mf-half h3 { margin: 0; }
+.r4 .mf-half .r4-fora { margin: 6px 0 0 !important; font-weight: 600; color: var(--c-text) !important; }
+.r4 .mf-points {
+  align-self: end; margin: 0; padding-top: 12px; border-top: 1px solid var(--c-line);
+  color: var(--c-copper);
+}
+@media print {
+  .r4 .mf-half h3 { font-size: 24px; }
+  .r4 .mf-points { font-size: 32px; }
+}
+
+/* Обложка: А35 и Фонд прижаты к КИПЕРБОЛУ с одинаковым зазором с обеих сторон
+   (Фонд шире А35, поэтому равняем по зазору, а не по отступу от края) */
+.r4-logos { column-gap: 5vw; }
+.r4-logos__a35 { justify-self: end; }
+.r4-logos__fond { justify-self: start; }
+@media print { .r4-logos { column-gap: 20mm; } }
+
+/* Обложка: строка логотипов чуть ниже верхнего края */
+.r4-logos { margin-top: 8vh; }
+@media print { .r4-logos { margin-top: 20mm !important; } }
+
+/* ---------- Текст по ширине ----------
+   Абзацы, пункты, подписи и сноски выровнены по обоим краям, с переносами
+   (lang="ru"), чтобы не было «рек» из пробелов. Заголовки, надзаголовки,
+   цифры и обложка с финалом — как были. */
+.r4 .slide:not(.slide--cover) .slide__inner { text-align: justify; hyphens: manual; -webkit-hyphens: manual; }
+.r4 .slide:not(.slide--cover) :is(h2, h3, .slide__eyebrow, .r4-part, .step__badge, .doc__tag, .doc__num, .doc__date,
+  .mf-points, .reason__num, .specs b, .facts-grid b, .media__stat b, .cal__date, .cal__game, .month, .slots, .routes b,
+  .route-map__addr, figcaption, .chips) { text-align: left; hyphens: manual; -webkit-hyphens: manual; }
+.r4 .slide:not(.slide--cover) .slots td.num { text-align: center; }
+/* В узких местах по ширине получаются дыры между словами — там текст по левому краю */
+.r4 .slide:not(.slide--cover) :is(.specs span, .mf-half p, .slide__banner) { text-align: left; }
+.r4 .slide:not(.slide--cover) .facts-grid:not(.facts-grid--2) span { text-align: left; }
+
+/* ---------- Схемы полей: кипербатл (слайд 5) и основной матч (слайд 6) ---------- */
+.r4-field-row { display: grid; gap: 18px; width: 100%; align-items: start; }
+.r4-field { margin: 0; min-width: 0; }
+.r4-field svg { display: block; width: 100%; height: auto; border-radius: var(--radius); }
+.r4-field-row .points { grid-template-columns: 1fr; }
+.r4-field-row--main .rules { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+@media (min-width: 900px), print {
+  .r4-field-row { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); }
+  .r4-field-row--main { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); }
+}
+@media print {
+  .r4-field-row .points li { font-size: 14px; padding-block: 7px; }
+}
+/* Слайд 6: без переносов карточки правил выше — им больше ширины, схеме меньше */
+@media (min-width: 900px), print {
+  .r4-field-row--main { grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.75fr); }
+}
+@media print { .r4-field-row--main .rules p { font-size: 13px; } }
+
+/* Слайд 19: фото награждения Кубка Игоря Акинфеева в блоке медиаохвата — под цифрой, до краёв плашки */
+.r4-stat-photo { --pad: clamp(14px, 1.6vw, 24px); padding: var(--pad); overflow: hidden; align-self: stretch; }
+.r4-stat-photo img {
+  display: block; width: calc(100% + 2 * var(--pad)); max-width: none; height: auto;
+  flex: 1 1 auto; min-height: 0; object-fit: cover; object-position: center 40%;
+  margin: 10px calc(-1 * var(--pad)) calc(-1 * var(--pad));
+}
+@media print { .r4-stat-photo img { max-height: 46mm; } }
+.r4 .media__side { align-content: start; align-self: center; }
+.r4 .media__chips { align-items: center; align-content: flex-start; }
+.r4 .slide:not(.slide--cover) .media__stat span { text-align: left; }
+
+/* Слайд 14: фасад Академии выше — кадр не выглядит обрезанным */
+.r4 .route-map__photo--img { max-height: 190px; object-position: center 55%; }
+@media print { .r4 .route-map__photo--img { height: 46mm !important; max-height: none !important; } }

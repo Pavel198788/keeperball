@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Светлая гамма сайта — та же, что у презентации: слоновая кость,
+   тёмно-синий и красный (цвета ЦСКА, эмблема клуба не используется).
+   Подключается после site.css и стилей страниц; включается классом
+   `theme-cska` на <body>. Прежняя тёмная гамма остаётся в site.css.
+   ========================================================================== */
+
+.theme-cska {
+  --c-bg: #F2EDE1;
+  --c-surface: #FFFFFF;
+  --c-surface-2: #FBF8F2;
+  --c-copper: #C8102E;
+  --c-copper-light: #E23B52;
+  --c-copper-dark: #8E0C20;
+  --c-text: #10234D;
+  --c-muted: #55617F;
+  --c-line: rgba(16, 35, 77, 0.16);
+  --c-line-strong: rgba(16, 35, 77, 0.30);
+  --c-on-copper: #FFFFFF;
+  --g-copper: linear-gradient(135deg, #E23B52 0%, #C8102E 55%, #8E0C20 100%);
+  --g-carbon: none;                       /* карбоновая текстура — только для тёмной гаммы */
+  --shadow: 0 14px 30px rgba(16, 35, 77, 0.12);
+}
+
+/* Водяной знак — силуэт вратаря полем, как на слайдах презентации.
+   Плитка бесшовная: стыки совпадают при любом размере окна. */
+body.theme-cska {
+  background-color: var(--c-bg);
+  background-image: url("../brand/vodyanoy-znak-sayt.svg");
+  background-repeat: repeat;   /* без attachment: fixed — на iOS он не работает,
+                                  и знак перестаёт тянуться по всей длине страницы */
+}
+/* Секции прозрачны, иначе знак под ними не виден */
+.theme-cska .section--surface { background: rgba(255, 255, 255, 0.45); background-image: none; }
+
+/* ---------- Места, где тёмный фон зашит мимо токенов ---------- */
+.theme-cska .site-header { background: rgba(242, 237, 225, 0.92); }
+
+/* Фотографии на светлом фоне приглушены — иначе текст по ним не читается */
+.theme-cska .page-hero__media { background-color: #EDE7D9; }
+.theme-cska .page-hero__media img { opacity: 0.28; }
+.theme-cska .page-hero::after {
+  background:
+    linear-gradient(90deg, rgba(242,237,225,0.94) 0%, rgba(242,237,225,0.82) 45%, rgba(242,237,225,0.5) 100%),
+    linear-gradient(0deg, rgba(242,237,225,1) 0%, rgba(242,237,225,0) 45%);
+}
+.theme-cska .home-media { background-color: var(--c-bg); }
+.theme-cska .home-media__bg { background-color: #EDE7D9; }
+.theme-cska .home-media__bg img { opacity: 0.3; }
+.theme-cska .home-media__bg::after {
+  background: linear-gradient(90deg, rgba(242,237,225,0.94) 0%, rgba(242,237,225,0.6) 60%, rgba(242,237,225,0.4) 100%);
+}
+.theme-cska .home-hero__stages li { background: #FFFFFF; }
+
+/* Логотип: на кости тень от щита не нужна */
+.theme-cska .home-hero__logo img { filter: drop-shadow(0 10px 18px rgba(16, 35, 77, 0.18)); }
+
+/* Подвал в тёмной гамме был почти чёрным — на светлом сайте он белый */
+.theme-cska .site-footer {
+  background: #FFFFFF;
+  border-top: 1px solid var(--c-line-strong);
+  color: var(--c-muted);
+}
+.theme-cska .placeholder { color: #8A5A00; background: #FFF6D6; }
+
+/* ---------- Типографика: как в презентации ----------
+   Надзаголовок набран той же гарнитурой, что заголовок, и крупнее прежних 12 px. */
+.theme-cska .eyebrow {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--c-copper);
+}
+.theme-cska .copper { color: var(--c-copper); }

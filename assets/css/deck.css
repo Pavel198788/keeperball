@@ -383,3 +383,75 @@ html:not(.js) .cover-shield::after { animation: cover-sheen 1.4s ease-in-out 0.5
   .team-mark, .chips li { background: var(--c-surface-2) !important; }
   a { color: var(--c-copper-light); }
 }
+
+/* ---------- Логотип на обложке деки (взамен щита) ----------
+   Логотип горизонтальный, 2.2:1, поэтому ограничение по высоте мягче, чем у щита. */
+.cover-logo { position: relative; flex: 0 0 auto; width: min(52vw, 95vh); }
+.cover-logo__img {
+  display: block; width: 100%; height: auto;
+  filter: drop-shadow(0 14px 20px rgba(0,0,0,0.6));
+}
+@supports (container-type: size) {
+  .js .slide--hero .cover-logo { width: min(52cqw, 95cqh); }
+}
+@media (max-width: 759px) {
+  .cover-logo { width: 86vw; }
+  .js .slide--hero .cover-logo { width: min(86vw, 40cqh); }
+}
+@media print { .cover-logo { width: 150mm; } }
+
+/* ---------- Водяной знак и марка с логотипом ----------
+   Знак — отдельная картинка, а не фон: часть сборок headless Chromium
+   фоновые изображения в печати не рисует (см. PROGRESS, правка 2026-10-22). */
+.slide__wm {
+  position: absolute; inset: 0; z-index: -1;
+  width: 100%; height: 100%; object-fit: cover;
+  pointer-events: none;
+}
+/* В тёмной теме тот же файл выворачивается в тёплый бежевый */
+body:not(.theme-cska) .slide__wm { filter: invert(1); }
+
+.slide__mark {
+  position: absolute; right: clamp(14px, 1.8vw, 30px); bottom: clamp(12px, 1.6vw, 26px);
+  width: clamp(72px, 7.5vw, 112px); height: auto; z-index: 1;
+  pointer-events: none;
+}
+.slide__mark--light { display: none; }
+.theme-cska .slide__mark--light { display: block; }
+.theme-cska .slide__mark--dark { display: none; }
+/* Слайды, где в углу уже есть содержимое */
+.slide--nomark .slide__mark { display: none; }
+
+@media print {
+  .slide__wm { display: block !important; }
+  .slide__mark { width: 30mm; right: 11mm; bottom: 8mm; }
+}
+
+/* ---------- Логотип на обложке и финальном слайде (взамен щита) ---------- */
+.cover-logo { position: relative; flex: 0 0 auto; width: min(52vw, 95vh); }
+.cover-logo__img { display: block; width: 100%; height: auto; }
+.cover-logo__img--light { display: none; }
+.theme-cska .cover-logo__img--light { display: block; }
+.theme-cska .cover-logo__img--dark { display: none; }
+
+.pz-end__logo { width: min(420px, 62vw); height: auto; margin: 0 auto; }
+.pz-end__logo--light { display: none; }
+.theme-cska .pz-end__logo--light { display: block; }
+.theme-cska .pz-end__logo--dark { display: none; }
+
+@supports (container-type: size) {
+  .js .slide--hero .cover-logo { width: min(52cqw, 95cqh); }
+}
+@media (max-width: 759px) {
+  .cover-logo { width: 86vw; }
+  .js .slide--hero .cover-logo { width: min(86vw, 40cqh); }
+}
+@media print {
+  /* !important — иначе правило контейнерного запроса выше по специфичности */
+  .cover-logo { width: 170mm !important; }
+  .pz-end__logo { width: 130mm !important; }
+}
+
+/* «Клубам»: фото награждения Кубка Игоря Акинфеева под цифрой медиаохвата */
+.media__photo { display: block; width: 100%; height: auto; margin-top: 12px; border-radius: 10px; }
+@media print { .media__photo { max-height: 60mm; object-fit: cover; } }

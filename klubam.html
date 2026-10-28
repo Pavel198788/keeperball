@@ -9,18 +9,20 @@
   <link rel="icon" type="image/png" href="assets/brand/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="assets/css/site.css">
   <link rel="stylesheet" href="assets/css/deck.css">
+  <link rel="stylesheet" href="assets/css/deck-cska.css">
+  <link rel="stylesheet" href="assets/css/site-cska.css">
   <script>document.documentElement.classList.add("js");</script>
 </head>
-<body>
+<body class="theme-cska">
 <a class="skip-link" href="#main">К содержимому</a>
 <!-- header:start -->
 <header class="site-header">
   <div class="wrap site-header__inner">
     <a class="site-brand" href="index.html">
-      <img src="assets/brand/shield-small.png" alt="Кипербол" width="61" height="46">
+      <img src="assets/brand/kiperbol-3d-chernyy.svg" alt="Кипербол" width="102" height="46">
       <span class="site-brand__text">Кубок Открытой<br>Лиги Кипербола</span>
     </a>
     <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -51,27 +53,26 @@
   <div class="deck" data-deck role="region" aria-roledescription="презентация" aria-label="Презентация для клубов">
     <div class="deck__stage">
     <section class="slide slide--cover slide--hero" aria-roledescription="слайд">
+      <img class="slide__wm" src="assets/brand/vodyanoy-znak-slayd.svg" alt="" aria-hidden="true" decoding="async">
       <img class="slide__bg" src="assets/img/cover-stadium.jpg" alt="" decoding="async">
       <div class="slide__inner">
-        <div class="cover-shield">
-          <picture>
-            <source srcset="assets/brand/shield.webp" type="image/webp">
-            <img class="cover-shield__img" src="assets/brand/shield.png" alt="Кипербол — Premium Series" width="1336" height="1000" decoding="async">
-          </picture>
-          <img class="cover-shield__print" src="assets/brand/shield-print.png" alt="" aria-hidden="true" width="1690" height="1449" decoding="async">
-          <span class="cover-shield__base" aria-hidden="true"></span>
+        <div class="cover-logo">
+          <img class="cover-logo__img" src="assets/brand/kiperbol-3d-chernyy.svg" alt="КИПЕРБОЛ" width="1093" height="493" decoding="async">
         </div>
         <p class="slide__eyebrow">Презентация для клубов</p>
         <h1 class="slide__title">Что даёт клубу Кубок Открытой Лиги Кипербола</h1>
         <p class="slide__lead">Турнир 2027 для молодёжных команд.</p>
         <dl class="cover-meta">
-          <div><dt>Российский этап</dt><dd>март–ноябрь 2027</dd></div>
-          <div><dt>Все матчи</dt><dd>Реутов, Академия А35</dd></div>
+          <div><dt>Российский этап</dt><dd>март–май 2027</dd></div>
+          <div><dt>Все матчи</dt><dd>Реутов, Стадион Академии Игоря Акинфеева А35</dd></div>
         </dl>
         <p class="cover-org">Организатор — Фонд «Страна Футбола» Игоря Акинфеева</p>
       </div>
     </section>
     <section class="slide slide--split" aria-roledescription="слайд">
+      <img class="slide__wm" src="assets/brand/vodyanoy-znak-slayd.svg" alt="" aria-hidden="true" decoding="async">
+      <img class="slide__mark slide__mark--light" src="assets/brand/kiperbol-3d-chernyy.svg" alt="" aria-hidden="true" decoding="async">
+      <img class="slide__mark slide__mark--dark" src="assets/brand/kiperbol-3d-svetlyy.svg" alt="" aria-hidden="true" decoding="async">
       <img class="slide__bg" src="assets/photos/goalkeeper-dive.jpg" alt="" loading="lazy" decoding="async">
       <div class="slide__inner">
         <p class="slide__eyebrow">Что такое кипербол</p>
@@ -86,19 +87,25 @@
       </div>
     </section>
     <section class="slide " aria-roledescription="слайд">
+      <img class="slide__wm" src="assets/brand/vodyanoy-znak-slayd.svg" alt="" aria-hidden="true" decoding="async">
+      <img class="slide__mark slide__mark--light" src="assets/brand/kiperbol-3d-chernyy.svg" alt="" aria-hidden="true" decoding="async">
+      <img class="slide__mark slide__mark--dark" src="assets/brand/kiperbol-3d-svetlyy.svg" alt="" aria-hidden="true" decoding="async">
       <img class="slide__bg" src="assets/photos/ball-dark.jpg" alt="" loading="lazy" decoding="async">
       <div class="slide__inner">
         <p class="slide__eyebrow">Формат матча</p>
         <h2 class="slide__title">Два тайма, три очка: каждая часть матча работает на результат</h2>
         <ol class="steps">
-          <li class="step"><span class="step__badge">1-й тайм</span><h3 class="step__title">Кипербатл</h3><p>Битва вратарей: 2×2, площадка 22 × 26 м, 6 минут. Победа — <strong>1 очко</strong>.</p></li>
-          <li class="step"><span class="step__badge">2-й тайм</span><h3 class="step__title">Футбольный матч</h3><p>10×10, 40 минут, без ограничения замен. Победа — <strong>2 очка</strong>.</p></li>
+          <li class="step"><span class="step__badge">1-й тайм</span><h3 class="step__title">Кипербатл</h3><p>Битва вратарей: 2×2, площадка 22 × 26 м, 2 тайма по 4 минуты. Победа — <strong>1 очко</strong>.</p></li>
+          <li class="step"><span class="step__badge">2-й тайм</span><h3 class="step__title">Футбольный матч</h3><p>10×10, 60 минут, без ограничения замен. Победа — <strong>2 очка</strong>.</p></li>
           <li class="step"><span class="step__badge">Финал матча</span><h3 class="step__title">Серия пенальти</h3><p>По 7 ударов, первыми бьют вратари. Победитель серии — победитель матча.</p></li>
         </ol>
         <p class="slide__note">Возможное распределение очков — 3:0 или 2:1. В плей-офф за кипербатл вместо очка команда получает фору в один гол.</p>
       </div>
     </section>
     <section class="slide " aria-roledescription="слайд">
+      <img class="slide__wm" src="assets/brand/vodyanoy-znak-slayd.svg" alt="" aria-hidden="true" decoding="async">
+      <img class="slide__mark slide__mark--light" src="assets/brand/kiperbol-3d-chernyy.svg" alt="" aria-hidden="true" decoding="async">
+      <img class="slide__mark slide__mark--dark" src="assets/brand/kiperbol-3d-svetlyy.svg" alt="" aria-hidden="true" decoding="async">
       <img class="slide__bg" src="assets/photos/goalkeeper-gloves.jpg" alt="" loading="lazy" decoding="async">
       <div class="slide__inner">
         <p class="slide__eyebrow">Почему это нужно клубу</p>
@@ -113,6 +120,9 @@
       </div>
     </section>
     <section class="slide " aria-roledescription="слайд">
+      <img class="slide__wm" src="assets/brand/vodyanoy-znak-slayd.svg" alt="" aria-hidden="true" decoding="async">
+      <img class="slide__mark slide__mark--light" src="assets/brand/kiperbol-3d-chernyy.svg" alt="" aria-hidden="true" decoding="async">
+      <img class="slide__mark slide__mark--dark" src="assets/brand/kiperbol-3d-svetlyy.svg" alt="" aria-hidden="true" decoding="async">
       <img class="slide__bg" src="assets/photos/field-night-aerial.jpg" alt="" loading="lazy" decoding="async">
       <div class="slide__inner">
         <p class="slide__eyebrow">Участники 2027</p>
@@ -122,24 +132,30 @@
       </div>
     </section>
     <section class="slide " aria-roledescription="слайд">
+      <img class="slide__wm" src="assets/brand/vodyanoy-znak-slayd.svg" alt="" aria-hidden="true" decoding="async">
+      <img class="slide__mark slide__mark--light" src="assets/brand/kiperbol-3d-chernyy.svg" alt="" aria-hidden="true" decoding="async">
+      <img class="slide__mark slide__mark--dark" src="assets/brand/kiperbol-3d-svetlyy.svg" alt="" aria-hidden="true" decoding="async">
       <img class="slide__bg" src="assets/photos/stadium-night.jpg" alt="" loading="lazy" decoding="async">
       <div class="slide__inner">
         <p class="slide__eyebrow">Российский этап · 2027</p>
         <h2 class="slide__title">Все матчи — в Реутове, между турами молодёжного чемпионата</h2>
         <ul class="facts-grid facts-grid--2">
-          <li><b>Март–ноябрь</b><span>Игры проходят еженедельно, ориентировочно по вторникам — между турами молодёжного чемпионата России, в один круг</span></li>
+          <li><b>Март–май</b><span>Игры проходят еженедельно, по вторникам — между турами молодёжного чемпионата России, в один круг: 7 игр у каждой команды, 10 игровых дней с 23 марта по 25 мая</span></li>
           <li><b>Одна арена</b><span>Все игры и финал — в Реутове. Выгодно командам: организация матчей ложится на нас, транспортная доступность хорошая</span></li>
         </ul>
       </div>
     </section>
     <section class="slide " aria-roledescription="слайд">
+      <img class="slide__wm" src="assets/brand/vodyanoy-znak-slayd.svg" alt="" aria-hidden="true" decoding="async">
+      <img class="slide__mark slide__mark--light" src="assets/brand/kiperbol-3d-chernyy.svg" alt="" aria-hidden="true" decoding="async">
+      <img class="slide__mark slide__mark--dark" src="assets/brand/kiperbol-3d-svetlyy.svg" alt="" aria-hidden="true" decoding="async">
       <img class="slide__bg" src="assets/photos/goal-net.jpg" alt="" loading="lazy" decoding="async">
       <div class="slide__inner">
         <p class="slide__eyebrow">Финал российского этапа</p>
         <h2 class="slide__title">Финал — на новейшем стадионе в Реутове</h2>
-        <p class="slide__lead">Финал четырёх — в конце мая — начале июня (как вариант — в день Кубка России по футболу) на новейшем стадионе с отличной инфраструктурой и прекрасным расположением.</p>
+        <p class="slide__lead">Финал четырёх — 29 (30) мая 2027 на новейшем стадионе с отличной инфраструктурой и прекрасным расположением: полуфиналы определяют финальную пару.</p>
         <ul class="points">
-          <li>Стадион — домашняя арена кипербола: на нём расположена Академия А35 Игоря Акинфеева</li>
+          <li>Стадион — домашняя арена кипербола: на нём расположена Академия Игоря Акинфеева А35</li>
           <li>Победитель российского этапа награждается Кубком Открытой Лиги Кипербола (Россия)</li>
         </ul>
         <ul class="facts-grid facts-grid--4">
@@ -152,11 +168,14 @@
       </div>
     </section>
     <section class="slide " aria-roledescription="слайд">
+      <img class="slide__wm" src="assets/brand/vodyanoy-znak-slayd.svg" alt="" aria-hidden="true" decoding="async">
+      <img class="slide__mark slide__mark--light" src="assets/brand/kiperbol-3d-chernyy.svg" alt="" aria-hidden="true" decoding="async">
+      <img class="slide__mark slide__mark--dark" src="assets/brand/kiperbol-3d-svetlyy.svg" alt="" aria-hidden="true" decoding="async">
       <img class="slide__bg" src="assets/photos/field-night-aerial.jpg" alt="" loading="lazy" decoding="async">
       <div class="slide__inner">
         <p class="slide__eyebrow">Домашняя арена кипербола</p>
         <h2 class="slide__title">Реутов — центр развития кипербола</h2>
-        <p class="slide__lead">Реутов и Академия А35 Игоря Акинфеева — центр развития кипербола, российского формата футбола: импортозамещение в спорте. Здесь проходят все матчи турнира, а не только финал.</p>
+        <p class="slide__lead">Реутов и Академия Игоря Акинфеева А35 — центр развития кипербола, российского формата футбола: импортозамещение в спорте. Здесь проходят все матчи турнира, а не только финал.</p>
         <ul class="facts-grid">
           <li><b>Все матчи здесь</b><span>Весь российский этап и финал — на одном стадионе в Реутове</span></li>
           <li><b>Организация — на нас</b><span>Это выгодно командам: организация матчей ложится на организатора</span></li>
@@ -165,12 +184,15 @@
       </div>
     </section>
     <section class="slide " aria-roledescription="слайд">
+      <img class="slide__wm" src="assets/brand/vodyanoy-znak-slayd.svg" alt="" aria-hidden="true" decoding="async">
+      <img class="slide__mark slide__mark--light" src="assets/brand/kiperbol-3d-chernyy.svg" alt="" aria-hidden="true" decoding="async">
+      <img class="slide__mark slide__mark--dark" src="assets/brand/kiperbol-3d-svetlyy.svg" alt="" aria-hidden="true" decoding="async">
       <img class="slide__bg" src="assets/photos/penalty-kick.jpg" alt="" loading="lazy" decoding="async">
       <div class="slide__inner">
         <p class="slide__eyebrow">Освещение</p>
         <h2 class="slide__title">Ваших игроков увидят: турнир будут освещать ведущие СМИ</h2>
         <div class="media">
-          <div class="media__stat"><b>168,4 млн</b><span>человек — общий медиаохват Кубка Игоря Акинфеева 2026 года, пример опыта Фонда «Страна Футбола» в освещении турниров</span></div>
+          <div class="media__stat"><b>168,4 млн</b><span>человек — общий медиаохват Кубка Игоря Акинфеева 2026 года, пример опыта Фонда «Страна Футбола» в освещении турниров</span><img class="media__photo" src="assets/photos/kubok-akinfeeva-2026-nagrazhdenie.jpg" alt="Награждение победителей Кубка Игоря Акинфеева 2026" width="1600" height="1056" loading="lazy" decoding="async"></div>
           <ul class="points">
             <li>Игорь Акинфеев лично участвует в популяризации проекта</li>
             <li>Репортажи на федеральных каналах</li>
@@ -180,15 +202,16 @@
       </div>
     </section>
     <section class="slide slide--cover slide--last" aria-roledescription="слайд">
+      <img class="slide__wm" src="assets/brand/vodyanoy-znak-slayd.svg" alt="" aria-hidden="true" decoding="async">
       <img class="slide__bg" src="assets/photos/goalkeeper-save.jpg" alt="" loading="lazy" decoding="async">
       <div class="slide__inner">
         <p class="slide__eyebrow">Следующий шаг</p>
         <h2 class="slide__title">Кубок России — для молодёжных команд</h2>
         <p class="slide__lead">Кубок Открытой Лиги Кипербола — как Кубок России, только для молодёжных команд: дополнительные матчи на результат, в которых в деле весь состав. Организацию берём на себя — присоединяйтесь к турниру 2027.</p>
         <dl class="contacts">
-          <div><dt>Почта</dt><dd><a data-contact="email" class="placeholder">[ПОЧТА — впиши]</a></dd></div>
-          <div><dt>Телефон</dt><dd><a data-contact="phone" class="placeholder">[ТЕЛЕФОН — впиши]</a></dd></div>
-          <div><dt>Соцсети</dt><dd><a data-contact="social" class="placeholder">[ТЕЛЕГРАМ/ВК — впиши]</a></dd></div>
+          <div><dt>Почтовый адрес</dt><dd>121099, г. Москва, Новинский бульвар, 11</dd></div>
+          <div><dt>E-mail</dt><dd><a data-contact="email" href="mailto:stranafond@yandex.ru">stranafond@yandex.ru</a></dd></div>
+          <div><dt>Сайт</dt><dd><a href="https://keeperball.ru">keeperball.ru</a></dd></div>
         </dl>
         <p class="slide__actions no-print"><a class="btn btn--primary" href="assets/klubam.pdf" download>Скачать PDF</a></p>
       </div>
@@ -211,6 +234,11 @@
         <p class="site-footer__title">Кубок Открытой Лиги Кипербола</p>
         <p>Организатор — Фонд «Страна Футбола» Игоря Акинфеева.</p>
         <p>Кипербол (KeeperBall) — новый формат футбола, в котором вратарь — главный герой.</p>
+        <div class="site-footer__logos">
+          <img src="assets/brand/a35-logo.png" alt="А35 — Академия Игоря Акинфеева" width="900" height="594" decoding="async">
+          <img src="assets/brand/fond-strana-futbola.png" alt="Фонд «Страна Футбола»" width="1200" height="552" decoding="async">
+          <img src="assets/brand/keeperball-3d-chernyy.svg" alt="KEEPERBALL" width="1207" height="493" decoding="async">
+        </div>
       </div>
       <nav aria-label="Меню в подвале">
         <p class="site-footer__heading">Разделы</p>
@@ -227,14 +255,14 @@
         </ul>
       </nav>
       <div>
-        <p class="site-footer__heading">Контакты</p>
+        <p class="site-footer__heading">Контакты Фонда «Страна Футбола»</p>
         <dl class="site-footer__contacts">
-          <dt>Почта</dt>
-          <dd><a data-contact="email" class="placeholder">[ПОЧТА — впиши]</a></dd>
-          <dt>Телефон</dt>
-          <dd><a data-contact="phone" class="placeholder">[ТЕЛЕФОН — впиши]</a></dd>
-          <dt>Соцсети</dt>
-          <dd><a data-contact="social" class="placeholder">[ТЕЛЕГРАМ/ВК — впиши]</a></dd>
+          <dt>Почтовый адрес</dt>
+          <dd>121099, г. Москва, Новинский бульвар, 11</dd>
+          <dt>E-mail</dt>
+          <dd><a data-contact="email" href="mailto:stranafond@yandex.ru">stranafond@yandex.ru</a></dd>
+          <dt>Сайт</dt>
+          <dd><a href="https://keeperball.ru">keeperball.ru</a></dd>
         </dl>
       </div>
     </div>
